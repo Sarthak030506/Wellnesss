@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+
+    <script>
+
+        function validateForm() {
+
+            let name = document.forms["myForm"]["name"].value;
+            let email = document.forms["myForm"]["email"].value;
+
+            if (name == "" || email == "") {
+
+                alert("All fields must be filled out");
+                return false;
+            }
+
+        
+            if (!email.includes("@") || !email.includes(".")) {
+
+                alert("Enter a valid email address");
+                return false;
+            }
+
+            alert("Form Submitted Successfully");
+            return true;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form name="myForm" onsubmit="return validateForm()">
+
+        <label>Name:</label><br>
+        <input type="text" name="name"><br><br>
+
+        <label>Email:</label><br>
+        <input type="text" name="email"><br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>

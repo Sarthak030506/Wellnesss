@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Display Welcome Message</title>
+
+    <style>
+
+        h2 {
+            text-align: center;
+            color: brown;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h3 {
+            text-align: left;
+            color: cadetblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<?php
+
+date_default_timezone_set("Asia/Kolkata");
+
+echo "<h2>WELCOME</h2>";
+
+echo "<h3>Today's Date is: ";
+echo date("l, F j, Y");
+echo "</h3>";
+
+echo "<h3>Today's Time is: ";
+echo date("h:i:s A");
+echo "</h3>";
+
+?>
+
+</body>
+</html>

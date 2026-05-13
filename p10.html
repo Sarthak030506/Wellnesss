@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: darkblue;
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 350px;
+            background: white;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        .gender input {
+            width: auto;
+        }
+
+        input[type="submit"] {
+            background: darkblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background: navy;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Personal Information Form</h2>
+
+    <div class="container">
+
+        <form action="process.php" method="post">
+
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Enter Name" required>
+
+            <label>Roll No</label>
+            <input type="number" name="rollno" placeholder="Enter Roll No" required>
+
+            <label>Section</label>
+            <input type="text" name="section" placeholder="Enter Section" required>
+
+            <label>Branch</label>
+            <input type="text" name="branch" placeholder="Enter Branch" required>
+
+            <label>Gender</label>
+
+            <div class="gender">
+                <input type="radio" name="gender" value="Male" required> Male
+
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+
+            <label>Mobile No</label>
+            <input type="number" name="phone" placeholder="Enter Mobile No" required>
+
+            <label>Address</label>
+            <textarea name="address" placeholder="Enter Address" required></textarea>
+
+            <label>Marks</label>
+            <input type="text" name="marks" placeholder="Enter Marks" required>
+
+            <input type="submit" name="submit" value="Submit">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

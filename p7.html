@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Example</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-left: 5px;
+        }
+
+        li {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Dynamic Content List</h1>
+
+    <input type="text" id="itemInput" placeholder="Enter item">
+
+    <button onclick="addItem()">Add Item</button>
+
+    <ul id="itemList"></ul>
+
+    <script>
+        function addItem() {
+
+            var inputBox = document.getElementById("itemInput");
+
+            var item = inputBox.value;
+
+            if (item == "") {
+                alert("Please enter an item");
+                return;
+            }
+
+            var li = document.createElement("li");
+
+            li.innerHTML = item;
+
+            document.getElementById("itemList").appendChild(li);
+
+            inputBox.value = "";
+        }
+    </script>
+
+</body>
+</html>
